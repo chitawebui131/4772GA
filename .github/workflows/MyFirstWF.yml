@@ -2,11 +2,15 @@ name: GitHub Actions Demo
 on:
   push:
   workflow_dispatch:
+env:
+  # Setting an environment variable with the value of a configuration variable
+  env_var: ${{ vars.MY_NAME }}
+  
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "The job was automatically triggered by a ${{ secrets.MY_SECRET_NAME }} "
       - run: echo "The job was automatically triggered by a ${{ vars.MY_NAME }} "
-
+      
 
