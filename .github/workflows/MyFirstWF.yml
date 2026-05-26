@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "The job was automatically triggered by a ${{ secrets.MY_SECRET_NAME }} "
-      - run: echo "The job was automatically triggered by a ${{ vars.MY_NAME }} "
+      - run: echo "The job was automatically triggered by a ${{ vars.env_var }} "
       
 
